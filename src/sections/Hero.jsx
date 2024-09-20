@@ -1,11 +1,18 @@
-import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 
+import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 
 import HackerRoom from "../componets/HackerRoom";
 import Loader from "../componets/Loader";
+import Target from "../componets/Target";
+import ReactLogo from "../componets/ReactLogo";
+import Cube from "../componets/Cube";
+import Rings from "../componets/Rings";
+import HeroCamera from "../componets/HeroCamera";
+import Button from "../componets/Button";
+
 import { calculateSizes } from "../constants";
 
 const Hero = () => {
@@ -13,11 +20,8 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTbalet = useMediaQuery({ maxWWWidth: 1024, minWidth: 768 });
 
-  const { deskPosition, deskScale } = calculateSizes(
-    isSmall,
-    isMobile,
-    isTbalet
-  );
+  const { targetPosition, ringPosition, reactLogoPosition, cubePosition } =
+    calculateSizes(isSmall, isMobile, isTbalet);
 
   return (
     <div className="min-h-screen w-full mx-auto flex flex-col relative">
@@ -36,16 +40,33 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0">
         <Canvas className="h-full w-full">
           <Suspense fallback={<Loader />}>
-            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+            <PerspectiveCamera makeDefault position={[0, 0, 35]} />
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
-            <HackerRoom
-              position={[1.2, -7, 1.9]}
-              rotation={[0.3, -3.1, 0]}
-              scale={0.1}
-            />
+            <HeroCamera isMobile={isMobile}>
+              <HackerRoom
+                position={[1.2, -7, 1.9]}
+                rotation={[0.3, -3.1, 0]}
+                scale={0.09}
+              />
+            </HeroCamera>
+            <group>
+              <Target position={targetPosition} />
+              <ReactLogo position={reactLogoPosition} />
+              <Cube position={cubePosition} />
+              <Rings position={ringPosition} />
+            </group>
           </Suspense>
         </Canvas>
+      </div>
+      <div className="w-[30%] absolute left-0 right-0 mx-auto bottom-7">
+        <a href="#contact" className="w-full">
+          <Button
+            name={"Contact Me"}
+            btnClass={"sm:w-fit w-full sm:min-w-96"}
+            isBeam={true}
+          />
+        </a>
       </div>
     </div>
   );

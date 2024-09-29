@@ -125,7 +125,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Crwon clothing - E-commerce App",
+    title: "Crown clothing - E-commerce App",
     logo: "assets/crown.svg",
     description:
       "Crown Clothing is a dynamic e-commerce platform designed to provide users with a seamless shopping experience for apparel.",

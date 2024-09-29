@@ -88,10 +88,10 @@ const Projects = () => {
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
           <Canvas className="w-full h-full">
             <ambientLight intensity={3.4} />
-            <directionalLight position={[10, 7, 0]} intensity={1} position={[10, 10, 5]} />
+            <directionalLight intensity={1} position={[10, 10, 5]} />
             <Center>
               <Suspense fallback={<Loader />}>
-                <group position={[0, 0, 0]} rotation={[0, -0.3, 0]}>
+                <group position={[0, -1.5, 0]} rotation={[0, -0.3, 0]}>
                   <Computer />
                 </group>
               </Suspense>

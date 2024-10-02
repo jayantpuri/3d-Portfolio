@@ -157,3 +157,26 @@ export const projects = [
     spotlight: "/assets/spotlight3.png",
   },
 ];
+
+export const experience = [
+  {
+    id: 1,
+    company: "Alba Inc.",
+    logo: "/assets/Alba-logo.jpg",
+    jobTitle: "FrontEnd Developer",
+    date: "2022 - 2024",
+    description:
+      "As a front end Developer, I designed the official website using React and Chakra UI, focusing on UI/UX to enhance user engagement by 20% and reduce bounce rates by 15%. I developed a web-based ERP system with React and NodeJS, improving team productivity by 40% through Agile/Scrum practices. Additionally, I led monthly training sessions that boosted task completion efficiency by 20%.",
+    animation: "clapping",
+  },
+  {
+    id: 2,
+    company: "National Campus and Community Radio Association",
+    logo: "assets/campus-logo.jpeg",
+    jobTitle: "FullStack Developer",
+    date: "2021 - 2022",
+    description:
+      "I revamped the company website using React and Material UI, redesigning the user experience to boost traffic by 50%. I developed a PostgreSQL database for efficient data management and implemented Socket.IO to introduce a chat feature, increasing user engagement by 50% and the average messages exchanged per meeting by 30%. To enhance security, I integrated authentication with Passport JS and established a file-sharing system that reduced printing costs by 40%.",
+    animation: "salute",
+  },
+];

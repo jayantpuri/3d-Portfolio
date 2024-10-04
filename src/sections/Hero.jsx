@@ -24,7 +24,7 @@ const Hero = () => {
     calculateSizes(isSmall, isMobile, isTbalet);
 
   return (
-    <div className="min-h-screen w-full mx-auto flex flex-col relative">
+    <div id="home" className="min-h-screen w-full mx-auto flex flex-col relative">
       <div className="w-full flex flex-col text-center c-space mx-auto gap-3 sm:mt-36 mt-24">
         <p className="sm:text-3xl text-1xl text-gray-300">
           Hi, my name is Jayant{" "}

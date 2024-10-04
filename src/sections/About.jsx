@@ -13,7 +13,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-full h-full p-16 sm:p-20 xl:p-32 my-28 grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 sm:gap-7">
+    <div id="about" className="w-full h-full p-16 sm:p-20 xl:p-32 my-28 grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 sm:gap-7">
       <div className="grid-container col-span-1 xl:row-span-3">
         <img
           src={"/assets/grid1.png"}

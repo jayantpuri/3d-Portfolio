@@ -19,7 +19,7 @@ const Projects = () => {
     });
   };
   return (
-    <section className="w-full h-full p-6 flex flex-col gap-24 sm:p-6 xl:p-16 my-28">
+    <section id="work" className="w-full h-full p-6 flex flex-col gap-24 sm:p-6 xl:p-16 my-28">
       <div className="text-3xl font-bold text-neutral-50">My Projects</div>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-6">
         <div
@@ -92,7 +92,7 @@ const Projects = () => {
             <Center>
               <Suspense fallback={<Loader />}>
                 <group position={[0, -1.5, 0]} rotation={[0, -0.3, 0]}>
-                  <Computer />
+                  <Computer video={currentProject.video} />
                 </group>
               </Suspense>
             </Center>

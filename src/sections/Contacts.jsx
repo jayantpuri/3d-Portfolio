@@ -45,7 +45,7 @@ const Contacts = () => {
     setFormState({ ...formState, [name]: value });
   };
   return (
-    <section className="w-full min-h-screen my-20 c-space flex flex-col gap-24">
+    <section id="contact" className="w-full min-h-screen my-20 c-space flex flex-col gap-24">
       <div className="text-3xl font-bold text-neutral-50">Contact Me</div>
       <div className="w-full min-h-screen relative flex flex-col justify-center items-center">
         <img

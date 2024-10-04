@@ -89,6 +89,7 @@ export const projects = [
       },
     ],
     spotlight: "/assets/spotlight1.png",
+    video: "/textures/myProject/project_1.mp4",
   },
   {
     id: 2,
@@ -122,6 +123,7 @@ export const projects = [
       },
     ],
     spotlight: "/assets/spotlight2.png",
+    video: "/textures/myProject/project_2.mp4",
   },
   {
     id: 3,
@@ -155,6 +157,7 @@ export const projects = [
       },
     ],
     spotlight: "/assets/spotlight3.png",
+    video: "/textures/myProject/project_3.mp4",
   },
 ];
 

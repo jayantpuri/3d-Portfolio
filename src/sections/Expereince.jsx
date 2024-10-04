@@ -50,6 +50,7 @@ const Expereince = () => {
                     alt={`${company} logo`}
                     className="w-16 h-16 rounded-3xl bg-black-600 p-2"
                   />
+
                   <div className="flex flex-col gap-2 items-center">
                     <h3 className="text-white text-lg">{company}</h3>
                     <h6 className="text-[16px] text-slate-400">
@@ -58,7 +59,6 @@ const Expereince = () => {
                     <p className="my-6 text-white-600 transition-all ease-in-out duration-300 group-hover:text-white-800">
                       {description}
                     </p>
-                    <div className="work-content-bar" />
                   </div>
                 </div>
               )
